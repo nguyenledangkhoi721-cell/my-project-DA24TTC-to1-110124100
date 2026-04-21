@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <title>In Bảng Cửu Chương</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../css/tyle5.css">
+</head>
+    <body>
+        <form id="frminbangcuuchuong">
+            <h2 class="table">Bảng Cửu Chương</h2>
+        <div class="form-group">
+            <label for="table">nhập số</label>
+          <input class="form control"type="text" id="txtns" name="textns"placeholder="nhập số"required>
+         <<input class="but" type="submit"name="sblogin" value="In">
+        </div>
+        <div id="kp">
+        </div>
+        </form>
+<script>
+const form = document.getElementById("frminbangcuuchuong");
+
+form.addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    let n = document.getElementById("txtns").value;
+    let kp = "";
+
+    for (let i = 1; i <= 10; i++) {
+        kp += n + " x " + i + " = " + (n * i) + "<br>";
+    }
+
+    document.getElementById("kp").innerHTML = kp;
+}
+</script>
+    </body>
