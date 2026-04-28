@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <title>thành công</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../css/tyle6.css">
+</head>
+    <body>
+        <script>
+            //tạo 1 thẻ div
+            const newDiv = document.createElement("div");
+            const newText = document.createTextNode("thành công");
+            // gắn thuộc tính vào newDiv
+            newDiv . setAttribute("class","product-item");
+            //tạo ảnh 
+            const newImage = document.createElement("img");
+            newImage.setAttribute("src", "../assets/images/oto.jpg");
+            //gắn thẻ ảnh vào khung chứa thẻ div có ảnh 
+            newDiv.appendChild(newImage);
+            const productInfo = document.createElement("div");
+            productInfo.setAttribute("class","product-Info");
+            //tạo tên
+            const productInfoName = document.createElement("p");
+            productInfo.setAttribute("class","productInfo-Name");
+            productInfoName.textContent = "Xe ô tô";
+            productInfo.appendChild(productInfoName);
+            //tạo giá
+            const productInfoporce = document.createElement("p");
+            productInfo.setAttribute("class","product-Infoporce");
+            productInfoporce.textContent = "21,000,000,000";
+            productInfo.appendChild(productInfoporce);
+            newDiv.appendChild(productInfo);
+            document.body.appendChild(newDiv);
+        </script>
+    </body>
+</html>
